@@ -28,18 +28,6 @@ async function signUp () {
     <div class="w-full max-w-lg mx-auto mt-4">
       <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <div class="mb-4">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
-            Email
-          </label>
-          <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="email"
-            type="text"
-            placeholder="Email"
-            v-model="email">
-          <p class="text-gray-500 text-xs">Give us your email.</p>
-        </div>
-        <div class="mb-4">
           <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
             Username
           </label>
@@ -49,7 +37,7 @@ async function signUp () {
             type="text"
             placeholder="Username"
             v-model="username">
-          <p class="text-gray-500 text-xs">Please choose a username.</p>
+          <p class="text-gray-500 text-xs">Enter your username.</p>
         </div>
         <div class="mb-6">
           <label class="block text-gray-700 text-sm font-bold" for="password">
@@ -61,7 +49,7 @@ async function signUp () {
             type="password"
             placeholder="Password"
             v-model="password">
-          <p class="text-gray-500 text-xs">Please choose a password.</p>
+          <p class="text-gray-500 text-xs">Enter your account password.</p>
         </div>
         <div class="flex items-center justify-around">
           <button
@@ -71,10 +59,10 @@ async function signUp () {
             Sign Up
           </button>
           <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
-            href="#"
-            @click="router.push({name: 'login'})"
+          href="#"
+          @click="router.push({name: 'signUp'})"
           >
-            Already have an account?
+            I don't have an account
           </a>
         </div>
       </form>
