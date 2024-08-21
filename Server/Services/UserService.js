@@ -1,5 +1,9 @@
 function getUserData (data) {
-    return 'This data is from getUserData function ' + data;
+    return 'This data is from getUserData function ' + data
 }
 
-export { getUserData }
+function create (data) {
+    return 'User created' + data
+}
+
+export { getUserData, create }

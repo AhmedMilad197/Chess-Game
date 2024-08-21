@@ -1,11 +1,19 @@
-import { loadHomePageData } from '../Server/Controllers/UserController.js';
-import express from 'express';
-const app = express()
+import { loadHomePageData, signUp } from '../Server/Controllers/UserController.js'
+import cors from "cors"
+import express from 'express'
 
-app.get('/', function (req, res) {
+const app = express()
+const router = express.Router()
+app.use(cors())
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
+app.use('/api', router)
+
+router.get('/', function (req, res) {
   res.send('Hello World')
 })
 
-app.get('/home', loadHomePageData)
+router.get('/home', loadHomePageData)
+router.post('/sign-up', signUp)
 
 app.listen(3000)

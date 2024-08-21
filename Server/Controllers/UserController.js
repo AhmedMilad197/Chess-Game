@@ -1,7 +1,11 @@
-import { getUserData } from '../Services/UserService.js';
+import { getUserData, create } from '../Services/UserService.js';
 
 function loadHomePageData (req, res) {
     res.send(getUserData(123))
 }
 
-export { loadHomePageData };
+function signUp (req, res) {
+    res.status(200).send(create(req.body));
+}
+
+export { loadHomePageData, signUp };
