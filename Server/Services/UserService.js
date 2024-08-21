@@ -3,7 +3,7 @@ function getUserData (data) {
 }
 
 function create (data) {
-    return 'User created' + data
+    return 'User created'
 }
 
 export { getUserData, create }
